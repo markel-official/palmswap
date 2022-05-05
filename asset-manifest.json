@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/palmswap/static/css/main.7c807d5e.css",
-    "main.js": "/palmswap/static/js/main.4c57074b.js",
+    "main.js": "/palmswap/static/js/main.7c9bb36a.js",
     "static/js/787.fead517c.chunk.js": "/palmswap/static/js/787.fead517c.chunk.js",
     "static/media/tradingApp.png": "/palmswap/static/media/tradingApp.a3028874736b12e2b3ea.png",
     "static/media/mobile.png": "/palmswap/static/media/mobile.5cf108abb7c6ebe6bfc9.png",
@@ -23,11 +23,11 @@
     "static/media/medium.svg": "/palmswap/static/media/medium.de16ac6557ed4f096825cf0a3358495e.svg",
     "static/media/thunder.svg": "/palmswap/static/media/thunder.12f828624d31379d13d8560522023617.svg",
     "main.7c807d5e.css.map": "/palmswap/static/css/main.7c807d5e.css.map",
-    "main.4c57074b.js.map": "/palmswap/static/js/main.4c57074b.js.map",
+    "main.7c9bb36a.js.map": "/palmswap/static/js/main.7c9bb36a.js.map",
     "787.fead517c.chunk.js.map": "/palmswap/static/js/787.fead517c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c807d5e.css",
-    "static/js/main.4c57074b.js"
+    "static/js/main.7c9bb36a.js"
   ]
 }
