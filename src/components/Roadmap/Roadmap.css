@@ -1,0 +1,115 @@
+/* 
+Roadmap custom styles
+*/
+
+:root {
+  --roadmap-columns-gap: 20px;
+
+  --first-roadmap-scaleY: 0%;
+  --second-roadmap-scaleY: 0%;
+}
+
+.roadmap-container--bottom {
+  margin-bottom: 30px;
+}
+
+
+.roadmap-column {
+  position: relative;
+}
+
+/* 
+Upper block left column
+.roadmap-container .roadmap-column:first-child
+*/
+.tracker {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 0px, 0);
+}
+.tracker__text {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+.tracker::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(133, 104, 219);
+}
+
+/* 
+Upper block right column
+.roadmap-container .roadmap-column:last-child
+*/
+
+.roadmap-container .roadmap-column:last-child {
+  padding-left: 20px;
+}
+.roadmap-container .roadmap-column:last-child .roadmap__path {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: calc(100% + 30px);
+  width: 3px;
+  background-color: rgba(109, 128, 202, 0.15);
+  transform: translate3d(-50%, 0, 0) scale3d(1, var(--first-roadmap-scaleY, 0%), 1);
+  /* transition: transform 0.1s linear; */
+  transform-origin: top center;
+}
+
+/* 
+BOTTOM
+*/
+/* 
+Bottom block left column
+.roadmap-container--bottom .roadmap-column:first-child
+*/
+.roadmap-container.roadmap-container--bottom .roadmap-column:last-child .roadmap__path {
+  height: calc(100%);
+  top: 0;
+  bottom: initial;
+  transform: translate3d(-50%, 0, 0) scale3d(1, var(--second-roadmap-scaleY, 0%), 1);
+}
+
+/* Circle at the bottom of the line */
+.roadmap-container.roadmap-container--bottom .roadmap-column:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(133, 104, 219);
+}
+
+.roadmap-container--bottom .tracker {
+  transform: translate3d(0, var(--roadmap-columns-gap), 0);
+}
+
+.roadmap-container--bottom .roadmap-column:first-child {
+  padding-top: var(--roadmap-columns-gap);
+}
+
+/* 
+Bottom block right column
+.roadmap-container--bottom .roadmap-column:last-child
+*/
+.roadmap-container--bottom .roadmap-column:last-child {
+  padding-top: var(--roadmap-columns-gap);
+}
+
+
+
+

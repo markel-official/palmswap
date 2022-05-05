@@ -1,0 +1,39 @@
+/* 
+Animation CSS
+*/
+.ticket-animation {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+.ticket-animation--1 {
+  /* animation-delay: 1s; */
+  animation: ticket-animation-transform ease-out 0.75s forwards 1s paused, ticket-animation-opacity ease-out 2s forwards 1s paused;
+}
+.ticket-animation--2 {
+  /* animation-delay: 2s; */
+  animation: ticket-animation-transform ease-out 0.75s forwards 3s paused, ticket-animation-opacity ease-out 2s forwards 3s paused;
+}
+
+.ticket-animation.ticket-animation--active {
+  animation-play-state: running;
+}
+
+@keyframes ticket-animation-transform {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to{
+    transform: translate3d(0%, 0, 0);
+  }
+}
+@keyframes ticket-animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
